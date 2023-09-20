@@ -1,0 +1,54 @@
+{
+
+    "Items" : [
+        {
+            "qList" :[
+                {
+                    "img": "0",
+                    "opt": "2",
+                    "answer": "Fishes have no fur"
+                },
+                {
+                    "img": "3",
+                    "opt": "1",
+                    "answer": "Frogs are not reptiles"
+                },
+                {
+                    "img": "6",
+                    "opt": "3",
+                    "answer": "Goose is no duck"
+                },
+                {
+                    "img": "9",
+                    "opt": "2",
+                    "answer": "The Tramp is a fictional character"
+                }
+            ]
+        },
+        {
+            "qList" :[
+                {
+                    "img": "0",
+                    "opt": "2",
+                    "answer": "messi"
+                },
+                {
+                    "img": "3",
+                    "opt": "1",
+                    "answer": "ronaldo"
+                },
+                {
+                    "img": "6",
+                    "opt": "3",
+                    "answer": "maradona"
+                },
+                {
+                    "img": "9",
+                    "opt": "2",
+                    "answer": "pele"
+                }
+            ]
+        }
+    ]
+    
+}
