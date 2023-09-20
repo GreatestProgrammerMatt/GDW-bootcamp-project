@@ -7,14 +7,19 @@ using TMPro;
 public class ManagerScr : MonoBehaviour
 {
     [SerializeField] Sprite[] images;
+    [SerializeField] TextAsset jsonGameTexts;
+    private MultiLangText _gameTexts;
     [SerializeField] TextAsset jsonLocal;
-    private string[] inputJson;
+    private int opcionCorrecta;
 
-    private List<QuizList> quizesList = new List<QuizList>();
+    private List<QuizList> categoryList = new List<QuizList>();
     private List<QuizModel> quizes = new List<QuizModel>();
     private int currentQuiz;
+    private int lang;
+    [SerializeField] int maxLang;
 
     [SerializeField] Image[] figure;
+    [SerializeField] TextMeshProUGUI hintPrompt;
     [SerializeField] TextMeshProUGUI answerPrompt;
 
     [SerializeField] GameObject mainPrompt;
@@ -26,8 +31,16 @@ public class ManagerScr : MonoBehaviour
 
     private void Start()
     {
-        quizesList = JSONHandler.ReadJSONTextAsset<QuizList>(jsonLocal);
-        quizes = quizesList[0].qList;
+        lang=0;
+        
+        _gameTexts = JSONHandler.ReaderJSONSingle<MultiLangText>(jsonGameTexts);
+        mainPrompt.GetComponent<TextMeshProUGUI>().text = _gameTexts.texto[lang];
+        
+        
+        opcionCorrecta = Random.Range(0,3);
+        //categoryList = JSONHandler.ReadJSONLocal<QuizList>(jsonLocal,"all-quitzes.json");
+        categoryList = JSONHandler.ReadJSONTextAsset<QuizList>(jsonLocal);
+        quizes = categoryList[0].category;
         currentQuiz=0;
         Painter();
     }
@@ -36,9 +49,11 @@ public class ManagerScr : MonoBehaviour
     {
         for (int i=0;i<3;i++)
         {
-            figure[i].sprite = images[quizes[currentQuiz].img+(1*i)];
+            figure[i].sprite = images[quizes[currentQuiz].img[i]];
         }
-        answerPrompt.text = quizes[currentQuiz].answer;
+        
+        hintPrompt.text = quizes[currentQuiz].hint[opcionCorrecta].texto[lang];
+        answerPrompt.text = quizes[currentQuiz].answer[opcionCorrecta].texto[lang];
     }
 
     public void buttonPress(int option)
@@ -49,11 +64,12 @@ public class ManagerScr : MonoBehaviour
     private void WinnScreen(int opt)
     {
         mainPrompt.SetActive(false);
+        hintPrompt.gameObject.SetActive(false);
 
-        winIcon.sprite = images[quizes[currentQuiz].img+(quizes[currentQuiz].opt-1)];
+        winIcon.sprite = images[quizes[currentQuiz].img[opcionCorrecta]];
         
         winScreen.SetActive(true);
-        if (opt == quizes[currentQuiz].opt)
+        if (opt == opcionCorrecta+1)
         {
             winEffect.SetActive(true);
         }
@@ -63,11 +79,13 @@ public class ManagerScr : MonoBehaviour
         }
     }
 
-    public void Resetter()
+    public void NextQuitz()
     {
+        opcionCorrecta = Random.Range(0,3);
         currentQuiz = (currentQuiz<(quizes.Count-1)) ? currentQuiz+=1 : 0;
         Painter();
         mainPrompt.SetActive(true);
+        hintPrompt.gameObject.SetActive(true);
         winScreen.SetActive(false);
     }
 }

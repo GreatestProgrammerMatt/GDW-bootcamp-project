@@ -246,7 +246,15 @@ public static class JSONHandler
         return default(T);
     }
 
-    // Convert JSON into single object from TextAssets
+    // Read single object from TextAssets
+    public static T ReaderJSONSingle<T>(TextAsset t)
+    {
+        string content = t.text;
+        T single = JsonUtility.FromJson<T>(content);
+        return single;
+    }
+
+    // Convert JSON into single object from TextAssets and save to File
     public static T ReaderJSONSingle<T>(TextAsset t, string file)
     {
         string path = PathFinder(file);

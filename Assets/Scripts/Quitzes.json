@@ -2,50 +2,408 @@
 
     "Items" : [
         {
-            "qList" :[
+            "isLocked" : "0",
+            "costToUnlock" : "0",
+            "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
+            "category" :[
                 {
-                    "img": "0",
-                    "opt": "2",
-                    "answer": "Fishes have no fur"
+                    "img": ["0","1","2"],
+                    "hint": [
+                        {
+                            "texto":[
+                                "It's the one",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It's the two",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It's the three",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ],
+                    "answer": [
+                        {
+                            "texto":[
+                                "It was the one",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It was the two",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It was the three",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "img": "3",
-                    "opt": "1",
-                    "answer": "Frogs are not reptiles"
+                    "img": ["3","4","5"],
+                    "hint": [
+                        {
+                            "texto":[
+                                "It's the one",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It's the two",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It's the three",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ],
+                    "answer": [
+                        {
+                            "texto":[
+                                "It was the one",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It was the two",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It was the three",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "img": "6",
-                    "opt": "3",
-                    "answer": "Goose is no duck"
+                    "img": ["6","7","8"],
+                    "hint": [
+                        {
+                            "texto":[
+                                "It's the one",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It's the two",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It's the three",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ],
+                    "answer": [
+                        {
+                            "texto":[
+                                "It was the one",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It was the two",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It was the three",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "img": "9",
-                    "opt": "2",
-                    "answer": "The Tramp is a fictional character"
+                    "img": ["9","10","11"],
+                    "hint": [
+                        {
+                            "texto":[
+                                "It's the one",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It's the two",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It's the three",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ],
+                    "answer": [
+                        {
+                            "texto":[
+                                "It was the one",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It was the two",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "It was the three",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ]
                 }
             ]
         },
         {
-            "qList" :[
+            "isLocked" : "0",
+            "costToUnlock" : "0",
+            "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
+            "category" :[
                 {
-                    "img": "0",
-                    "opt": "2",
-                    "answer": "messi"
+                    "img": ["0","1","2"],
+                    "hint": [
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ],
+                    "answer": [
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "img": "3",
-                    "opt": "1",
-                    "answer": "ronaldo"
+                    "img": ["3","4","5"],
+                    "hint": [
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ],
+                    "answer": [
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "img": "6",
-                    "opt": "3",
-                    "answer": "maradona"
+                    "img": ["6","7","8"],
+                    "hint": [
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ],
+                    "answer": [
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "img": "9",
-                    "opt": "2",
-                    "answer": "pele"
+                    "img": ["9","10","11"],
+                    "hint": [
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ],
+                    "answer": [
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        },
+                        {
+                            "texto":[
+                                "Hint in eng",
+                                "Pista en esp",
+                                "Tipp aus deutsch"
+                            ]
+                        }
+                    ]
                 }
             ]
         }

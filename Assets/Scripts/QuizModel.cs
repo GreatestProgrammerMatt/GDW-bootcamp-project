@@ -5,24 +5,40 @@ using System.Collections.Generic;
 [Serializable]
 public class QuizModel
 {
-    public int img;
-    public int opt;
-    public string answer;
+    public int[] img;
+    public List<MultiLangText> hint = new List<MultiLangText>();
+    public List<MultiLangText> answer = new List<MultiLangText>();
 
-    public void Quizer(int i, int o, string s)
+    public void Quizer(int[] i, List<MultiLangText> h, List<MultiLangText> a)
     {
         img=i;
-        opt=o;
-        answer=s;
+        hint=h;
+        answer=a;
     }
 }
 
 [Serializable]
 public class QuizList
 {
-    public List<QuizModel> qList = new List<QuizModel>();
-    public void QLister(List<QuizModel> q)
+    public bool isLlocked;
+    public bool[] categoryStars;
+    public int costToUnlock;
+    public List<QuizModel> category = new List<QuizModel>();
+    public void QLister(List<QuizModel> q, bool l, bool[] s, int c)
     {
-        qList = q;
+        isLlocked = l;
+        categoryStars = s;
+        costToUnlock = c;
+        category = q;
+    }
+}
+
+[Serializable]
+public class MultiLangText
+{
+    public string[] texto;
+    public void MLTexter(string[] t)
+    {
+        texto = t;
     }
 }
