@@ -9,197 +9,53 @@
                 {
                     "img": ["0","1","2"],
                     "hint": [
-                        {
-                            "texto":[
-                                "It's the one",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It's the two",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It's the three",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
                     ],
                     "answer": [
-                        {
-                            "texto":[
-                                "It was the one",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It was the two",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It was the three",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["3","4","5"],
                     "hint": [
-                        {
-                            "texto":[
-                                "It's the one",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It's the two",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It's the three",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
                     ],
                     "answer": [
-                        {
-                            "texto":[
-                                "It was the one",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It was the two",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It was the three",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["6","7","8"],
                     "hint": [
-                        {
-                            "texto":[
-                                "It's the one",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It's the two",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It's the three",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
                     ],
                     "answer": [
-                        {
-                            "texto":[
-                                "It was the one",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It was the two",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It was the three",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["9","10","11"],
                     "hint": [
-                        {
-                            "texto":[
-                                "It's the one",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It's the two",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It's the three",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
                     ],
                     "answer": [
-                        {
-                            "texto":[
-                                "It was the one",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It was the two",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "It was the three",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 }
             ]
@@ -212,197 +68,53 @@
                 {
                     "img": ["0","1","2"],
                     "hint": [
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
                     ],
                     "answer": [
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["3","4","5"],
                     "hint": [
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
                     ],
                     "answer": [
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["6","7","8"],
                     "hint": [
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
                     ],
                     "answer": [
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["9","10","11"],
                     "hint": [
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
                     ],
                     "answer": [
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        },
-                        {
-                            "texto":[
-                                "Hint in eng",
-                                "Pista en esp",
-                                "Tipp aus deutsch"
-                            ]
-                        }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 }
             ]
