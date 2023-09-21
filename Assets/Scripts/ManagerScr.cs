@@ -10,13 +10,18 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] TextAsset jsonGameTexts;
     private MultiLangText _gameTexts;
     [SerializeField] TextAsset jsonLocal;
+    
+    
     private int opcionCorrecta;
-
     private List<QuizList> categoryList = new List<QuizList>();
     private List<QuizModel> quizes = new List<QuizModel>();
+    private int currentCategory;
     private int currentQuiz;
     private int lang;
     [SerializeField] int maxLang;
+    private int score;
+    private bool sound;
+    private bool firstTime=true;
 
     [SerializeField] Image[] figure;
     [SerializeField] TextMeshProUGUI hintPrompt;
@@ -40,10 +45,45 @@ public class ManagerScr : MonoBehaviour
         opcionCorrecta = Random.Range(0,3);
         //categoryList = JSONHandler.ReadJSONLocal<QuizList>(jsonLocal,"all-quitzes.json");
         categoryList = JSONHandler.ReadJSONTextAsset<QuizList>(jsonLocal);
+        
+        Initialize();
+
+
         quizes = categoryList[0].category;
         currentQuiz=0;
         Painter();
     }
+
+    private void Initialize()
+    {
+        if (firstTime)
+        {
+            currentCategory=0;
+            QuitzStart();
+        }
+        else
+        {
+            //Mostrar la selección de categorías
+        }
+    }
+
+
+
+
+
+    private void QuitzStart()
+    {
+        ProgressBar();
+        quizes = categoryList[currentCategory].category;
+        currentQuiz=0;
+        Painter();
+    }
+
+    private void ProgressBar()
+    {
+        //puebla la barra de progreso con las estrellas que haya
+    }
+
 
     private void Painter()
     {
