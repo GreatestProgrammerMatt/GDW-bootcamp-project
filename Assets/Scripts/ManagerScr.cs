@@ -53,9 +53,6 @@ public class ManagerScr : MonoBehaviour
 
     private void Start()
     {
-        //Intial GameStatusData default values
-        
-        opcionCorrecta = Random.Range(0,3);
 
         //Loads Data from JSON files or TextAssets
         LoadProtocol();
@@ -81,6 +78,17 @@ public class ManagerScr : MonoBehaviour
         //categoryList = JSONHandler.ReadJSONLocal<QuizList>(jsonLocal,"all-quitzes.json");
         categoryList = JSONHandler.ReadJSONTextAsset<QuizList>(jsonLocal);
 
+        //Carga los botones para seleccionar la categoría
+        int i = 0;
+        foreach (QuizList qL in categoryList)
+        {
+            GameObject selector = Instantiate(botonSelector,grid.transform);
+            selector.GetComponent<BotonSelector>().index = i; 
+            selector.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = qL.nombre[lang];
+            selector.GetComponent<BotonSelector>().manager = this;
+            i+=1;
+        }
+
         //Initialize the game proper
         Initialize();
     }
@@ -98,7 +106,7 @@ public class ManagerScr : MonoBehaviour
         else
         {
             //Mostrar la selección de categorías
-            ShowCategories();
+            ShowCategories(true);
         }
     }
 
@@ -106,14 +114,18 @@ public class ManagerScr : MonoBehaviour
 
     private void QuitzStart(int selectedCategory)
     {
-        ProgressBar();
         quizes = categoryList[selectedCategory].quizList;
+        opcionCorrecta = Random.Range(0,3);
         currentQuiz=0;
         Painter();
     }
 
     private void ProgressBar()
     {
+        foreach (Transform child in progressionBar.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         //puebla la barra de progreso con las estrellas que haya
         for (int i = 0; i<10 ; i++)
         {
@@ -123,6 +135,10 @@ public class ManagerScr : MonoBehaviour
             if (categoryList[currentCategory].categoryStars[i])
             {
                 dot.transform.GetChild(2).gameObject.SetActive(true);
+            }
+            if (i==currentQuiz)
+            {
+                dot.transform.localScale = new Vector3 (2,2,2);
             }
         }
     }
@@ -137,8 +153,11 @@ public class ManagerScr : MonoBehaviour
         
         hintPrompt.text = quizes[currentQuiz].hint[opcionCorrecta].texto[lang];
         answerPrompt.text = quizes[currentQuiz].answer[opcionCorrecta].texto[lang];
+        ProgressBar();
     }
 
+
+    //Botones
     public void buttonPress(int option)
     {
         WinnScreen(option);
@@ -155,6 +174,15 @@ public class ManagerScr : MonoBehaviour
         if (opt == opcionCorrecta+1)
         {
             winEffect.SetActive(true);
+            //check if star unlocked
+            if (!categoryList[currentCategory].categoryStars[currentQuiz])
+            {
+                score+=1;
+                scoreBoard.text = score.ToString();
+                categoryList[currentCategory].categoryStars[currentQuiz] = true;
+                ProgressBar();
+            }
+            
         }
         else
         {
@@ -164,26 +192,36 @@ public class ManagerScr : MonoBehaviour
 
     public void NextQuiz()
     {
-        opcionCorrecta = Random.Range(0,3);
-        currentQuiz = (currentQuiz<(quizes.Count-1)) ? currentQuiz+=1 : 0;
-        Painter();
+        //if it is the last quiz or the tenth, move on to categories.
+        if ( currentQuiz == 10 || currentQuiz == quizes.Count-1)
+        {
+            //Salir de los quizes e ir a las categorías
+            ShowCategories(true);
+        }
+        else
+        {
+            //Move to next quiz
+            opcionCorrecta = Random.Range(0,3);
+            currentQuiz+=1;
+            Painter();
+        }
         mainPrompt.SetActive(true);
         hintPrompt.gameObject.SetActive(true);
         winScreen.SetActive(false);
     }
 
-
-
-
-
-    private void ShowCategories()
+    public void SelectCategory(int index)
     {
-        pantallaJuego.SetActive(false);
-        foreach (QuizList qL in categoryList)
-        {
-            GameObject selector = Instantiate(botonSelector,grid.transform);
-            selector.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = qL.nombre[lang];
-        }
-        pantallaCategos.SetActive(true);
+        ShowCategories(false);
+        currentCategory=index;
+        QuitzStart(currentCategory); 
+    }
+
+
+
+    private void ShowCategories(bool activate)
+    {
+        pantallaJuego.SetActive(!activate);
+        pantallaCategos.SetActive(activate);
     }
 }

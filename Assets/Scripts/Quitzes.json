@@ -19,6 +19,123 @@
                         { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
                         { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
+                },
+                {
+                    "img": ["3","4","5"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
+                },
+                {
+                    "img": ["6","7","8"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
+                },
+                {
+                    "img": ["0","5","8"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
+                },
+                {
+                    "img": ["6","3","7"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
+                },
+                {
+                    "img": ["0","4","2"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
+                },
+                {
+                    "img": ["0","1","2"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
+                },
+                {
+                    "img": ["0","1","2"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
+                },
+                {
+                    "img": ["0","1","2"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
+                },
+                {
+                    "img": ["0","1","2"],
+                    "hint": [
+                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
+                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
+                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                    ],
+                    "answer": [
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                    ]
                 }
             ]
         },
@@ -29,7 +146,7 @@
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {
-                    "img": ["0","1","2"],
+                    "img": ["3","6","7"],
                     "hint": [
                         { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
                         { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
