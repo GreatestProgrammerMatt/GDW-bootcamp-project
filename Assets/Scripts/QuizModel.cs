@@ -20,16 +20,18 @@ public class QuizModel
 [Serializable]
 public class QuizList
 {
+    public string[] nombre;
     public bool isLlocked;
     public bool[] categoryStars;
     public int costToUnlock;
-    public List<QuizModel> category = new List<QuizModel>();
-    public void QLister(List<QuizModel> q, bool l, bool[] s, int c)
+    public List<QuizModel> quizList = new List<QuizModel>();
+    public void QLister(string[] n, List<QuizModel> q, bool l, bool[] s, int c)
     {
+        nombre = n;
         isLlocked = l;
         categoryStars = s;
         costToUnlock = c;
-        category = q;
+        quizList = q;
     }
 }
 
@@ -40,5 +42,21 @@ public class MultiLangText
     public void MLTexter(string[] t)
     {
         texto = t;
+    }
+}
+
+[Serializable]
+public class GameDataSave
+{
+    public int SavedLang;
+    public int SavedScore;
+    public bool SavedSound;
+    public bool SavedFirstTime;
+    public void GDSinit(int l, int c, bool s, bool f)
+    {
+        SavedLang =l;
+        SavedScore = c;
+        SavedSound = s;
+        SavedFirstTime = f;
     }
 }

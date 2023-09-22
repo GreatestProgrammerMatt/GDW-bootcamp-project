@@ -85,9 +85,9 @@ public static class JSONHandler
     //Método básico para leer JSON desde un archivo
     public static List<T> ReadJSONFile<T> (string file)
     {
-        string content = Reader(PathFinder(file));
-        List<T> feed = Feeder<T>(content);
-        return feed;
+            string content = Reader(PathFinder(file));
+            List<T> feed = Feeder<T>(content);
+            return feed;
     }
 
 
