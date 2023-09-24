@@ -5,7 +5,7 @@
             "nombre" : ["Animals","Animales","Tiere"],
             "isLocked" : "0",
             "costToUnlock" : "0",
-            "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
+            "categoryStars" : ["0","0","1","0","0","1","0","1","0","0"],
             "quizList" :[
                 {
                     "img": ["0","1","2"],
@@ -183,8 +183,8 @@
         },
         {
             "nombre" : ["Food","Comida","Essen"],
-            "isLocked" : "0",
-            "costToUnlock" : "0",
+            "isLocked" : "1",
+            "costToUnlock" : "10",
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {
@@ -204,8 +204,8 @@
         },
         {
             "nombre" : ["Food","Comida","Essen"],
-            "isLocked" : "0",
-            "costToUnlock" : "0",
+            "isLocked" : "1",
+            "costToUnlock" : "10",
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {
@@ -225,8 +225,8 @@
         },
         {
             "nombre" : ["Food","Comida","Essen"],
-            "isLocked" : "0",
-            "costToUnlock" : "0",
+            "isLocked" : "1",
+            "costToUnlock" : "15",
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {
@@ -246,8 +246,8 @@
         },
         {
             "nombre" : ["Food","Comida","Essen"],
-            "isLocked" : "0",
-            "costToUnlock" : "0",
+            "isLocked" : "1",
+            "costToUnlock" : "15",
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {
@@ -267,8 +267,8 @@
         },
         {
             "nombre" : ["Food","Comida","Essen"],
-            "isLocked" : "0",
-            "costToUnlock" : "0",
+            "isLocked" : "1",
+            "costToUnlock" : "20",
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {
@@ -288,8 +288,8 @@
         },
         {
             "nombre" : ["Food","Comida","Essen"],
-            "isLocked" : "0",
-            "costToUnlock" : "0",
+            "isLocked" : "1",
+            "costToUnlock" : "20",
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {
@@ -309,8 +309,8 @@
         },
         {
             "nombre" : ["Food","Comida","Essen"],
-            "isLocked" : "0",
-            "costToUnlock" : "0",
+            "isLocked" : "1",
+            "costToUnlock" : "25",
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {
@@ -330,8 +330,8 @@
         },
         {
             "nombre" : ["Food","Comida","Essen"],
-            "isLocked" : "0",
-            "costToUnlock" : "0",
+            "isLocked" : "1",
+            "costToUnlock" : "30",
             "categoryStars" : ["0","0","0","0","0","0","0","0","0","0"],
             "quizList" :[
                 {

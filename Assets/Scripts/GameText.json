@@ -1,10 +1,25 @@
 {
-    
+    "Items":[
+        {
             "texto" : [
                 "Pick the odd one out",
                 "Cuál NO corresponde?",
                 "Welche passt nicht?"
             ]
-        
-    
+        },
+        {
+            "texto" : [
+                "Not enough stars",
+                "Estrellas insuficientes",
+                "Nicht genug Sterne"
+            ]
+        },
+        {
+            "texto" : [
+                "Spend stars?",
+                "Usar estrellas?",
+                "Sterne bezahlen?"
+            ]
+        }
+    ]
 }

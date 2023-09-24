@@ -21,14 +21,14 @@ public class QuizModel
 public class QuizList
 {
     public string[] nombre;
-    public bool isLlocked;
+    public bool isLocked;
     public bool[] categoryStars;
     public int costToUnlock;
     public List<QuizModel> quizList = new List<QuizModel>();
     public void QLister(string[] n, List<QuizModel> q, bool l, bool[] s, int c)
     {
         nombre = n;
-        isLlocked = l;
+        isLocked = l;
         categoryStars = s;
         costToUnlock = c;
         quizList = q;

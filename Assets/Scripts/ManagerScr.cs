@@ -9,18 +9,16 @@ public class ManagerScr : MonoBehaviour
     [Header("Archivos y arrays")]
     [SerializeField] Sprite[] images;
     [SerializeField] TextAsset jsonGameTexts;
-    private MultiLangText _gameTexts;
+    private List<MultiLangText> _gameTexts =new List<MultiLangText>();
     [SerializeField] string jsonGameDataFile;
     private GameDataSave _gameData;
     
-    [SerializeField] TextAsset jsonLocal;
-    
-    
-    private int opcionCorrecta;
+    [SerializeField] TextAsset jsonLocal; 
     private List<QuizList> categoryList = new List<QuizList>();
     private List<QuizModel> quizes = new List<QuizModel>();
     private int currentCategory;
     private int currentQuiz;
+    private List<GameObject> categoryButtons = new List<GameObject>();
     
     [Header("Game data")]
     [SerializeField] int maxLang;
@@ -28,6 +26,7 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] private int score;
     [SerializeField] private bool sound;
     [SerializeField] private bool firstTime;
+    private int opcionCorrecta;
     
     [Header("Game object references")]
     [SerializeField] GameObject pantallaJuego;
@@ -36,6 +35,10 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] GameObject botonSelector;
     [SerializeField] GameObject grid;
 
+    [SerializeField] GameObject pantallaPop;
+    [SerializeField] GameObject messageBox;
+    [SerializeField] TextMeshProUGUI popMessage;
+
     [SerializeField] TextMeshProUGUI scoreBoard;
     [SerializeField] GameObject progressionBar;
     [SerializeField] GameObject progressionDot;
@@ -43,12 +46,14 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] Image[] figure;
     [SerializeField] TextMeshProUGUI hintPrompt;
     [SerializeField] TextMeshProUGUI answerPrompt;
-
     [SerializeField] GameObject mainPrompt;
-
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject winEffect;
     [SerializeField] Image winIcon;
+    
+    [Header("ColorReferences")]
+    [SerializeField] Color VERDE_BOTON;
+    [SerializeField] Color ROJO_BOTON;
 
 
     private void Start()
@@ -72,8 +77,8 @@ public class ManagerScr : MonoBehaviour
         }
         scoreBoard.text = score.ToString();
 
-        _gameTexts = JSONHandler.ReaderJSONSingle<MultiLangText>(jsonGameTexts);
-        mainPrompt.GetComponent<TextMeshProUGUI>().text = _gameTexts.texto[lang];
+        _gameTexts = JSONHandler.ReadJSONTextAsset<MultiLangText>(jsonGameTexts);
+        mainPrompt.GetComponent<TextMeshProUGUI>().text = _gameTexts[0].texto[lang];
 
         //categoryList = JSONHandler.ReadJSONLocal<QuizList>(jsonLocal,"all-quitzes.json");
         categoryList = JSONHandler.ReadJSONTextAsset<QuizList>(jsonLocal);
@@ -84,8 +89,19 @@ public class ManagerScr : MonoBehaviour
         {
             GameObject selector = Instantiate(botonSelector,grid.transform);
             selector.GetComponent<BotonSelector>().index = i; 
-            selector.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = qL.nombre[lang];
             selector.GetComponent<BotonSelector>().manager = this;
+            selector.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = qL.nombre[lang];
+            if (qL.isLocked)
+            {
+                selector.GetComponent<Image>().color = ROJO_BOTON;
+                selector.transform.GetChild(1).GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = qL.costToUnlock.ToString();
+            }
+            else
+            {
+                selector.GetComponent<Image>().color = VERDE_BOTON;
+                selector.transform.GetChild(1).gameObject.SetActive(false);
+            }
+            categoryButtons.Add(selector);
             i+=1;
         }
 
@@ -212,9 +228,46 @@ public class ManagerScr : MonoBehaviour
 
     public void SelectCategory(int index)
     {
-        ShowCategories(false);
         currentCategory=index;
-        QuitzStart(currentCategory); 
+
+        //Pregunto si está bloquedao, si lo está pop message 
+        if (categoryList[currentCategory].isLocked)
+        {
+            //Pop message based on score
+            PopScreenToggle(true);
+            messageBox.SetActive(true);
+
+            if (score < categoryList[currentCategory].costToUnlock)
+            {
+                popMessage.text=_gameTexts[1].texto[lang];
+            }
+            else
+            {
+                popMessage.text=_gameTexts[2].texto[lang];
+            }
+            
+        }
+        else
+        {
+            ShowCategories(false);
+            QuitzStart(currentCategory);
+        } 
+    }
+
+    public void OkButton()
+    {
+        if (score >= categoryList[currentCategory].costToUnlock)
+            {
+                score -= categoryList[currentCategory].costToUnlock;
+                categoryList[currentCategory].isLocked=false;
+
+                categoryButtons[currentCategory].GetComponent<Image>().color = VERDE_BOTON;
+                categoryButtons[currentCategory].transform.GetChild(1).gameObject.SetActive(false);
+
+                ShowCategories(false);
+                QuitzStart(currentCategory);
+            }
+        PopScreenToggle(false);
     }
 
 
@@ -223,5 +276,11 @@ public class ManagerScr : MonoBehaviour
     {
         pantallaJuego.SetActive(!activate);
         pantallaCategos.SetActive(activate);
+    }
+
+
+    public void PopScreenToggle(bool activate)
+    {
+        pantallaPop.SetActive(activate);
     }
 }
