@@ -20,6 +20,13 @@
                 "Usar estrellas?",
                 "Sterne bezahlen?"
             ]
+        },
+        {
+            "texto" : [
+                "Language",
+                "Idioma",
+                "Sprache"
+            ]
         }
     ]
 }

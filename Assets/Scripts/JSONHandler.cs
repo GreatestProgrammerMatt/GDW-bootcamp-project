@@ -25,7 +25,7 @@ public static class JSONHandler
     {
         string path = PathFinder(file);
         string content;
-        Debug.Log(PathFinder(file));
+        //Debug.Log(PathFinder(file));
 
         //Si existe el archivo lee de ahí, si no lee del Asset del juego la primera vez
         if (File.Exists(path))
@@ -108,7 +108,7 @@ public static class JSONHandler
     //Guarda el JSON
     public static void SaveJSON<T> (List<T> savedFile, string file)
     {
-        Debug.Log(PathFinder(file));
+        //Debug.Log(PathFinder(file));
         string content = JsonHelper.ToJson<T>(savedFile.ToArray());
     
         Writer(PathFinder(file),content);
@@ -258,14 +258,33 @@ public static class JSONHandler
     public static T ReaderJSONSingle<T>(TextAsset t, string file)
     {
         string path = PathFinder(file);
+        string content;
+        if (File.Exists(path))
+        {
+            content = Reader(path);
+            T single = JsonUtility.FromJson<T>(content);
+            return single;
+        }
+        else
+        {
+            content = t.text;
+            T single = JsonUtility.FromJson<T>(content);
+            Writer(path,content);
 
-        string content = t.text;
-        T single = JsonUtility.FromJson<T>(content);
+            return single;
+        }
+
+    }
+
+
+    //Converts single object into JSON file
+    public static void WriteJSONSingle<T> (T single, string file)
+    {
+        string path = PathFinder(file);
 
         string contentToSave = JsonUtility.ToJson(single);
         Writer(path,contentToSave);
-
-        return single;
     }
+
 
 }

@@ -10,10 +10,12 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] Sprite[] images;
     [SerializeField] TextAsset jsonGameTexts;
     private List<MultiLangText> _gameTexts =new List<MultiLangText>();
-    [SerializeField] string jsonGameDataFile;
+    [SerializeField] TextAsset jsonGameDataAsset;
     private GameDataSave _gameData;
-    
-    [SerializeField] TextAsset jsonLocal; 
+    [SerializeField] string gameDataSaveFaileName;
+
+    [SerializeField] TextAsset jsonLocal;
+    [SerializeField] string quizListFileName;
     private List<QuizList> categoryList = new List<QuizList>();
     private List<QuizModel> quizes = new List<QuizModel>();
     private int currentCategory;
@@ -25,6 +27,7 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] private int lang;
     [SerializeField] private int score;
     [SerializeField] private bool sound;
+    [SerializeField] bool ads;
     [SerializeField] private bool firstTime;
     private int opcionCorrecta;
     
@@ -39,6 +42,13 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] GameObject messageBox;
     [SerializeField] TextMeshProUGUI popMessage;
 
+    [SerializeField] GameObject optPop;
+    [SerializeField] Sprite[] optIcons;
+    [SerializeField] Image soundButton;
+    [SerializeField] Image adsButton;
+    [SerializeField] Image flagButton;
+    [SerializeField] TextMeshProUGUI langButton;
+
     [SerializeField] TextMeshProUGUI scoreBoard;
     [SerializeField] GameObject progressionBar;
     [SerializeField] GameObject progressionDot;
@@ -52,8 +62,8 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] Image winIcon;
     
     [Header("ColorReferences")]
-    [SerializeField] Color VERDE_BOTON;
-    [SerializeField] Color ROJO_BOTON;
+    [SerializeField] Color C_VERDE;
+    [SerializeField] Color C_ROJO;
 
 
     private void Start()
@@ -66,8 +76,8 @@ public class ManagerScr : MonoBehaviour
 
     private void LoadProtocol()
     {
-        //Load game data (cambiar el JSON reader con file)
-        _gameData = JSONHandler.ReaderJSONSingle<GameDataSave>(jsonGameDataFile);
+        //Load game data
+        _gameData = JSONHandler.ReaderJSONSingle<GameDataSave>(jsonGameDataAsset,gameDataSaveFaileName);
         if (_gameData!=null)
         {
             lang = _gameData.SavedLang;
@@ -75,13 +85,19 @@ public class ManagerScr : MonoBehaviour
             sound = _gameData.SavedSound;
             firstTime = _gameData.SavedFirstTime;
         }
-        scoreBoard.text = score.ToString();
+
 
         _gameTexts = JSONHandler.ReadJSONTextAsset<MultiLangText>(jsonGameTexts);
         mainPrompt.GetComponent<TextMeshProUGUI>().text = _gameTexts[0].texto[lang];
 
-        //categoryList = JSONHandler.ReadJSONLocal<QuizList>(jsonLocal,"all-quitzes.json");
-        categoryList = JSONHandler.ReadJSONTextAsset<QuizList>(jsonLocal);
+        scoreBoard.text = score.ToString();
+        if (sound) {soundButton.sprite = optIcons[0];}else{soundButton.sprite = optIcons[1];}
+        if (ads) {adsButton.sprite = optIcons[2];}else{adsButton.sprite = optIcons[3];}
+        langButton.text = _gameTexts[3].texto[lang];
+        flagButton.sprite = optIcons[4+lang];
+
+        categoryList = JSONHandler.ReadJSONLocal<QuizList>(jsonLocal,quizListFileName);
+        //categoryList = JSONHandler.ReadJSONTextAsset<QuizList>(jsonLocal);
 
         //Carga los botones para seleccionar la categoría
         int i = 0;
@@ -93,12 +109,12 @@ public class ManagerScr : MonoBehaviour
             selector.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = qL.nombre[lang];
             if (qL.isLocked)
             {
-                selector.GetComponent<Image>().color = ROJO_BOTON;
+                selector.GetComponent<Image>().color = C_ROJO;
                 selector.transform.GetChild(1).GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = qL.costToUnlock.ToString();
             }
             else
             {
-                selector.GetComponent<Image>().color = VERDE_BOTON;
+                selector.GetComponent<Image>().color = C_VERDE;
                 selector.transform.GetChild(1).gameObject.SetActive(false);
             }
             categoryButtons.Add(selector);
@@ -173,7 +189,18 @@ public class ManagerScr : MonoBehaviour
     }
 
 
-    //Botones
+/*
+ 
+ ::::::::::::::::::'##:::::::'##:'########:::'#######::'########::'#######::'##::: ##:'########::'######::
+ :::::::::::::::::'##:::::::'##:: ##.... ##:'##.... ##:... ##..::'##.... ##: ###:: ##: ##.....::'##... ##:
+ ::::::::::::::::'##:::::::'##::: ##:::: ##: ##:::: ##:::: ##:::: ##:::: ##: ####: ##: ##::::::: ##:::..::
+ :::::::::::::::'##:::::::'##:::: ########:: ##:::: ##:::: ##:::: ##:::: ##: ## ## ##: ######:::. ######::
+ ::::::::::::::'##:::::::'##::::: ##.... ##: ##:::: ##:::: ##:::: ##:::: ##: ##. ####: ##...:::::..... ##:
+ :::::::::::::'##:::::::'##:::::: ##:::: ##: ##:::: ##:::: ##:::: ##:::: ##: ##:. ###: ##:::::::'##::: ##:
+ ::::::::::::'##:::::::'##::::::: ########::. #######::::: ##::::. #######:: ##::. ##: ########:. ######::
+ ::::::::::::..::::::::..::::::::........::::.......::::::..::::::.......:::..::::..::........:::......:::
+ 
+*/
     public void buttonPress(int option)
     {
         WinnScreen(option);
@@ -187,7 +214,7 @@ public class ManagerScr : MonoBehaviour
         winIcon.sprite = images[quizes[currentQuiz].img[opcionCorrecta]];
         
         winScreen.SetActive(true);
-        if (opt == opcionCorrecta+1)
+        if (opt == opcionCorrecta)
         {
             winEffect.SetActive(true);
             //check if star unlocked
@@ -195,7 +222,11 @@ public class ManagerScr : MonoBehaviour
             {
                 score+=1;
                 scoreBoard.text = score.ToString();
+                StartCoroutine(SaveGameData(gameDataSaveFaileName));
+
                 categoryList[currentCategory].categoryStars[currentQuiz] = true;
+                StartCoroutine(SaveData(categoryList,quizListFileName));
+                
                 ProgressBar();
             }
             
@@ -212,6 +243,7 @@ public class ManagerScr : MonoBehaviour
         if ( currentQuiz == 10 || currentQuiz == quizes.Count-1)
         {
             //Salir de los quizes e ir a las categorías
+
             ShowCategories(true);
         }
         else
@@ -236,6 +268,7 @@ public class ManagerScr : MonoBehaviour
             //Pop message based on score
             PopScreenToggle(true);
             messageBox.SetActive(true);
+            optPop.SetActive(false);
 
             if (score < categoryList[currentCategory].costToUnlock)
             {
@@ -259,15 +292,58 @@ public class ManagerScr : MonoBehaviour
         if (score >= categoryList[currentCategory].costToUnlock)
             {
                 score -= categoryList[currentCategory].costToUnlock;
-                categoryList[currentCategory].isLocked=false;
+                StartCoroutine(SaveGameData(gameDataSaveFaileName));
 
-                categoryButtons[currentCategory].GetComponent<Image>().color = VERDE_BOTON;
+                categoryList[currentCategory].isLocked=false;
+                StartCoroutine(SaveData(categoryList,quizListFileName));
+
+                categoryButtons[currentCategory].GetComponent<Image>().color = C_VERDE;
                 categoryButtons[currentCategory].transform.GetChild(1).gameObject.SetActive(false);
 
                 ShowCategories(false);
                 QuitzStart(currentCategory);
             }
         PopScreenToggle(false);
+    }
+
+    public void OptionsMenuToggle()
+    {
+        PopScreenToggle(true);
+        messageBox.SetActive(false);
+        optPop.SetActive(true);
+    }
+
+    public void SoundOptionToggle()
+    {
+        sound = !sound;
+        if (sound) {soundButton.sprite = optIcons[0];}else{soundButton.sprite = optIcons[1];}
+        StartCoroutine(SaveGameData(gameDataSaveFaileName));
+    }
+    public void AdsOptionToggle()
+    {
+        ads = !ads;
+        if (ads) {adsButton.sprite = optIcons[2];}else{adsButton.sprite = optIcons[3];}
+    }
+    public void LangOptionToggle()
+    {
+        lang = (lang<maxLang-1)? lang+=1 : 0;
+        langButton.text = _gameTexts[3].texto[lang];
+        flagButton.sprite = optIcons[4+lang];
+
+        mainPrompt.GetComponent<TextMeshProUGUI>().text = _gameTexts[0].texto[lang];
+        if (pantallaJuego.activeSelf)
+        {
+            hintPrompt.text = quizes[currentQuiz].hint[opcionCorrecta].texto[lang];
+            answerPrompt.text = quizes[currentQuiz].answer[opcionCorrecta].texto[lang];
+        }
+        var i=0;
+        foreach (GameObject button in categoryButtons)
+        {
+            button.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = categoryList[i].nombre[lang];
+            i+=1;
+        }
+
+        StartCoroutine(SaveGameData(gameDataSaveFaileName));
     }
 
 
@@ -282,5 +358,37 @@ public class ManagerScr : MonoBehaviour
     public void PopScreenToggle(bool activate)
     {
         pantallaPop.SetActive(activate);
+    }
+
+
+/*
+ 
+ ::::::::::::::::::'##:::::::'##::'######:::'#######::'########:::'#######::'##::::'##:'########:'####:'##::: ##:'########::'######::
+ :::::::::::::::::'##:::::::'##::'##... ##:'##.... ##: ##.... ##:'##.... ##: ##:::: ##:... ##..::. ##:: ###:: ##: ##.....::'##... ##:
+ ::::::::::::::::'##:::::::'##::: ##:::..:: ##:::: ##: ##:::: ##: ##:::: ##: ##:::: ##:::: ##::::: ##:: ####: ##: ##::::::: ##:::..::
+ :::::::::::::::'##:::::::'##:::: ##::::::: ##:::: ##: ########:: ##:::: ##: ##:::: ##:::: ##::::: ##:: ## ## ##: ######:::. ######::
+ ::::::::::::::'##:::::::'##::::: ##::::::: ##:::: ##: ##.. ##::: ##:::: ##: ##:::: ##:::: ##::::: ##:: ##. ####: ##...:::::..... ##:
+ :::::::::::::'##:::::::'##:::::: ##::: ##: ##:::: ##: ##::. ##:: ##:::: ##: ##:::: ##:::: ##::::: ##:: ##:. ###: ##:::::::'##::: ##:
+ ::::::::::::'##:::::::'##:::::::. ######::. #######:: ##:::. ##:. #######::. #######::::: ##::::'####: ##::. ##: ########:. ######::
+ ::::::::::::..::::::::..:::::::::......::::.......:::..:::::..:::.......::::.......::::::..:::::....::..::::..::........:::......:::
+ 
+*/
+
+    private IEnumerator SaveData (List<QuizList> listaDeDatos, string fileName)
+    {
+        JSONHandler.SaveJSON<QuizList>(listaDeDatos,fileName);
+        yield return null;
+    }
+
+    private IEnumerator SaveGameData (string fileName)
+    {
+        _gameData.SavedLang = lang;
+        _gameData.SavedScore = score;
+        _gameData.SavedSound = sound;
+        _gameData.SavedFirstTime = firstTime;
+        
+        
+        JSONHandler.WriteJSONSingle<GameDataSave>(_gameData,fileName);
+        yield return null;
     }
 }
