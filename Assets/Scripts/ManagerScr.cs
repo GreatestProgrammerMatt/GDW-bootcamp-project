@@ -378,6 +378,7 @@ public class ManagerScr : MonoBehaviour
                         if (score >= categoryList[currentCategory].costToUnlock)
                         {
                             score -= categoryList[currentCategory].costToUnlock;
+                            scoreBoard.text = score.ToString();
                             StartCoroutine(SaveGameData(gameDataSaveFaileName));
 
                             categoryList[currentCategory].isLocked=false;

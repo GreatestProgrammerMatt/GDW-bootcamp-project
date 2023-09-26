@@ -156,66 +156,66 @@
                 {
                     "img": ["30","31","32"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "More abstract","Más abstractos","Mehr abstrakt" ] },
+                        { "texto" : [ "Colorful","Colorido","Bunt" ] },
+                        { "texto" : [ "Reality check","Choque de realidad","Realitätsschock" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Mona Lisa is realist","La Mona Lisa es realista","Mona Lisa ist realistisch" ] },
+                        { "texto" : [ "Guernica is monochromatic","EL Guernica es monocromático","Guernica ist monochromatisch" ] },
+                        { "texto" : [ "The Starry Night is inspired in a dream","La noche estrellada se inspira en un sueño","Sternennacht ist basierend auf einem Traum" ] }
                     ]
                 },
                 {
                     "img": ["33","34","35"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "USA!","Estados Unidos!","USA!" ] },
+                        { "texto" : [ "Only short ones","Bajos","Die kleine" ] },
+                        { "texto" : [ "Spots","Deporte","Sports" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Messi is argentine","Messi es argentino","Messi ist argentiner" ] },
+                        { "texto" : [ "Jordan is the tallest","Jordan es el más alto","Jordan ist der Grösste" ] },
+                        { "texto" : [ "Hendrix is a musician","Hendrix es músico","Hendrix ist ein Musiker" ] }
                     ]
                 },
                 {
                     "img": ["36","37","38"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Tall Towers","Altas torres","Hohe Türme" ] },
+                        { "texto" : [ "Colorful","Coloridos","Bunt" ] },
+                        { "texto" : [ "No way to know the time","No hay forma de saber la hora","Keine Möglichkeit, die Uhrzeit zu kennen" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Taj Mahal isn't a tower","El Taj Mahal no es una torre","Taj Mahal ist kein Trum" ] },
+                        { "texto" : [ "Eiffel tower is black","La torre Eiffel es negra","Eiffel Trum ist schwarz" ] },
+                        { "texto" : [ "The Big Ben has a clock","EL Big Ben tiene reloj","Der Big Ben hat eine Uhr" ] }
                     ]
                 },
                 {
                     "img": ["39","40","41"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "They are on the dollar bill","En el billete del dolar","Im Dollar Schein" ] },
+                        { "texto" : [ "So alive","Tan vivos","So lebend" ] },
+                        { "texto" : [ "No humas allowed","Sin humanos","Kein Menschen" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Aliens are not on the dollar bill","Los aliens no aparecen en el billete del dolar","Aliens sind nicht im Dollar Schein" ] },
+                        { "texto" : [ "Pyramids are not alive","Las pirámides no están vivas","Pyramiden sind nicht lebend" ] },
+                        { "texto" : [ "Franklin was a human","Franklin era humano","Franklin war ein Mensch" ] }
                     ]
                 },
                 {
                     "img": ["42","43","44"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Good time to be good","Buen momento para ser bueno","Gute Zeit, um gut zu sein" ] },
+                        { "texto" : [ "So real","Tan real","So real" ] },
+                        { "texto" : [ "Good sight","Buena vista","Gut Anblick" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Hitler wasn't right","Hitler no","Hitler war ein Mensch" ] },
+                        { "texto" : [ "The tramp is a fictional character","El vagabundo es un personaje ficticio","Der Landstreicher ist eine fiktive Figur" ] },
+                        { "texto" : [ "Gandhi wears glasses","Gandhi usa lentes","Gandhi nutzt Brille" ] }
                     ]
                 }
             ]
