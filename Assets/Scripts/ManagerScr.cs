@@ -33,6 +33,7 @@ public class ManagerScr : MonoBehaviour
     private bool canSelectCategory=true;
     
     [Header("Game object references")]
+    [SerializeField] private Image background;
     [SerializeField] private GameObject pantallaJuego;
 
     [SerializeField] private GameObject pantallaCategos;
@@ -61,10 +62,15 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject winEffect;
     [SerializeField] private Image winIcon;
+    [SerializeField] private Image winFrame;
+    [Space(10)]
+    [SerializeField] private AudioSource[] audioSources;
+    [SerializeField] private AudioClip[] audioClips;
     
     [Header("ColorReferences")]
     [SerializeField] private Color C_VERDE;
     [SerializeField] private Color C_ROJO;
+    [SerializeField] private Color[] C_BKG;
 
 
     private void Start()
@@ -93,6 +99,7 @@ public class ManagerScr : MonoBehaviour
 
         scoreBoard.text = score.ToString();
         if (sound) {soundButton.sprite = optIcons[0];}else{soundButton.sprite = optIcons[1];}
+        AudioListener.pause = !sound;
         if (ads) {adsButton.sprite = optIcons[2];}else{adsButton.sprite = optIcons[3];}
         langButton.text = _gameTexts[3].texto[lang];
         flagButton.sprite = optIcons[4+lang];
@@ -127,6 +134,8 @@ public class ManagerScr : MonoBehaviour
             categoryButtons.Add(selector);
             i+=1;
         }
+
+        background.color = C_BKG[0];
 
         //Initialize the game proper
         Initialize();
@@ -168,7 +177,10 @@ public class ManagerScr : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
+
         //puebla la barra de progreso con las estrellas que haya
+        AudioPlay(1,1f,3);
+        
         Vector2 pos = progressionBar.transform.position;
         progressionBar.transform.localScale = new Vector3 (0,0,0);
         LeanTween.scale(progressionBar,new Vector3(1,1,1),0.2f).setDelay(0.2f).setEase(LeanTweenType.linear).setOnComplete(
@@ -211,6 +223,10 @@ public class ManagerScr : MonoBehaviour
 
     private void Painter()
     {
+        int colorAleatorio = Random.Range(0,C_BKG.Length);
+        background.color = C_BKG[colorAleatorio];
+        if (colorAleatorio < C_BKG.Length-1) {winFrame.color = C_BKG[colorAleatorio+1];}else{winFrame.color = C_BKG[0];}
+        
         for (int i=0;i<3;i++)
         {
             figure[i].sprite = images[quizes[currentQuiz].img[i]];
@@ -261,11 +277,18 @@ public class ManagerScr : MonoBehaviour
                 
                 progressionBar.transform.GetChild(currentQuiz).GetChild(1).gameObject.SetActive(true);
                 progressionBar.transform.GetChild(currentQuiz).GetChild(1).GetChild(0).gameObject.SetActive(true);
+
+                AudioPlay(0,1f,0);
+            }
+            else
+            {
+                AudioPlay(0,1f,1);
             }
             
         }
         else
         {
+            AudioPlay(0,1f,2);
             winEffect.SetActive(false);
         }
     }
@@ -302,6 +325,7 @@ public class ManagerScr : MonoBehaviour
         {
             canSelectCategory=false;
             currentCategory=index;
+            AudioPlay(1,2f);
 
             //Pregunto si está bloquedao, si lo está pop message 
             if (categoryList[currentCategory].isLocked)
@@ -341,6 +365,7 @@ public class ManagerScr : MonoBehaviour
     {
         if (!LeanTween.isTweening(messageBox.transform.GetChild(1).gameObject))
         {
+            AudioPlay(1);
             LeanTween.scale(messageBox.transform.GetChild(1).gameObject,new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
                 ()=> {
                         if (score >= categoryList[currentCategory].costToUnlock)
@@ -368,15 +393,18 @@ public class ManagerScr : MonoBehaviour
         PopScreenToggle(true);
         messageBox.SetActive(false);
         optPop.SetActive(true);
+        AudioPlay(1,2f);
     }
 
     public void SoundOptionToggle()
     {
         if (!LeanTween.isTweening(soundButton.gameObject))
         {
+            AudioPlay(1);
             LeanTween.scale(soundButton.gameObject,new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
                 ()=> {
                     sound = !sound;
+                    AudioListener.pause = !sound;
                     if (sound) {soundButton.sprite = optIcons[0];}else{soundButton.sprite = optIcons[1];}
                     StartCoroutine(SaveGameData(gameDataSaveFaileName));
                 }
@@ -387,6 +415,7 @@ public class ManagerScr : MonoBehaviour
     {
         if (!LeanTween.isTweening(adsButton.gameObject))
         {
+            AudioPlay(1);
             LeanTween.scale(adsButton.gameObject,new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
                 ()=> {
                     ads = !ads;
@@ -401,6 +430,7 @@ public class ManagerScr : MonoBehaviour
     {
         if (!LeanTween.isTweening(optPop.transform.GetChild(2).gameObject))
         {
+            AudioPlay(1);
             LeanTween.scale(optPop.transform.GetChild(2).gameObject,new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
                 ()=> {
                     lang = (lang<maxLang-1)? lang+=1 : 0;
@@ -430,6 +460,11 @@ public class ManagerScr : MonoBehaviour
 
     private void ShowCategories(bool activate)
     {
+        if (activate)
+        {
+            AudioPlay(1,1f,3);
+        }
+        
         pantallaJuego.SetActive(!activate);
         pantallaCategos.SetActive(activate);
     }
@@ -441,6 +476,14 @@ public class ManagerScr : MonoBehaviour
         {
             pantallaPop.SetActive(activate);
         }
+    }
+
+
+    private void AudioPlay(int source, float pitch=1f, int clip=2)
+    {
+        audioSources[source].clip = audioClips[clip];
+        audioSources[source].pitch = pitch;
+        audioSources[source].Play();
     }
 
 
