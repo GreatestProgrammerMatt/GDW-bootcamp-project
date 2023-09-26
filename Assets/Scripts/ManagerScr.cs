@@ -7,15 +7,15 @@ using TMPro;
 public class ManagerScr : MonoBehaviour
 {
     [Header("Archivos y arrays")]
-    [SerializeField] Sprite[] images;
-    [SerializeField] TextAsset jsonGameTexts;
+    [SerializeField] private Sprite[] images;
+    [SerializeField] private TextAsset jsonGameTexts;
     private List<MultiLangText> _gameTexts =new List<MultiLangText>();
-    [SerializeField] TextAsset jsonGameDataAsset;
+    [SerializeField] private TextAsset jsonGameDataAsset;
     private GameDataSave _gameData;
-    [SerializeField] string gameDataSaveFaileName;
+    [SerializeField] private string gameDataSaveFaileName;
 
-    [SerializeField] TextAsset jsonLocal;
-    [SerializeField] string quizListFileName;
+    [SerializeField] private TextAsset jsonLocal;
+    [SerializeField] private string quizListFileName;
     private List<QuizList> categoryList = new List<QuizList>();
     private List<QuizModel> quizes = new List<QuizModel>();
     private int currentCategory;
@@ -23,47 +23,48 @@ public class ManagerScr : MonoBehaviour
     private List<GameObject> categoryButtons = new List<GameObject>();
     
     [Header("Game data")]
-    [SerializeField] int maxLang;
+    [SerializeField] private int maxLang;
     [SerializeField] private int lang;
     [SerializeField] private int score;
     [SerializeField] private bool sound;
-    [SerializeField] bool ads;
+    [SerializeField] private bool ads;
     [SerializeField] private bool firstTime;
     private int opcionCorrecta;
+    private bool canSelectCategory=true;
     
     [Header("Game object references")]
-    [SerializeField] GameObject pantallaJuego;
+    [SerializeField] private GameObject pantallaJuego;
 
-    [SerializeField] GameObject pantallaCategos;
-    [SerializeField] GameObject botonSelector;
-    [SerializeField] GameObject grid;
+    [SerializeField] private GameObject pantallaCategos;
+    [SerializeField] private GameObject botonSelector;
+    [SerializeField] private GameObject grid;
 
-    [SerializeField] GameObject pantallaPop;
-    [SerializeField] GameObject messageBox;
-    [SerializeField] TextMeshProUGUI popMessage;
+    [SerializeField] private GameObject pantallaPop;
+    [SerializeField] private GameObject messageBox;
+    [SerializeField] private TextMeshProUGUI popMessage;
 
-    [SerializeField] GameObject optPop;
-    [SerializeField] Sprite[] optIcons;
-    [SerializeField] Image soundButton;
-    [SerializeField] Image adsButton;
-    [SerializeField] Image flagButton;
-    [SerializeField] TextMeshProUGUI langButton;
+    [SerializeField] private GameObject optPop;
+    [SerializeField] private Sprite[] optIcons;
+    [SerializeField] private Image soundButton;
+    [SerializeField] private Image adsButton;
+    [SerializeField] private Image flagButton;
+    [SerializeField] private TextMeshProUGUI langButton;
 
-    [SerializeField] TextMeshProUGUI scoreBoard;
-    [SerializeField] GameObject progressionBar;
-    [SerializeField] GameObject progressionDot;
+    [SerializeField] private TextMeshProUGUI scoreBoard;
+    [SerializeField] private GameObject progressionBar;
+    [SerializeField] private GameObject progressionDot;
 
-    [SerializeField] Image[] figure;
-    [SerializeField] TextMeshProUGUI hintPrompt;
-    [SerializeField] TextMeshProUGUI answerPrompt;
-    [SerializeField] GameObject mainPrompt;
-    [SerializeField] GameObject winScreen;
-    [SerializeField] GameObject winEffect;
-    [SerializeField] Image winIcon;
+    [SerializeField] private Image[] figure;
+    [SerializeField] private TextMeshProUGUI hintPrompt;
+    [SerializeField] private TextMeshProUGUI answerPrompt;
+    [SerializeField] private GameObject mainPrompt;
+    [SerializeField] private GameObject winScreen;
+    [SerializeField] private GameObject winEffect;
+    [SerializeField] private Image winIcon;
     
     [Header("ColorReferences")]
-    [SerializeField] Color C_VERDE;
-    [SerializeField] Color C_ROJO;
+    [SerializeField] private Color C_VERDE;
+    [SerializeField] private Color C_ROJO;
 
 
     private void Start()
@@ -117,6 +118,12 @@ public class ManagerScr : MonoBehaviour
                 selector.GetComponent<Image>().color = C_VERDE;
                 selector.transform.GetChild(1).gameObject.SetActive(false);
             }
+
+            selector.GetComponent<Tweener>().myTween = Tweener.ETypeOfTween.PopUpGrow;
+            selector.GetComponent<Tweener>().speed = 0.4f;
+            selector.GetComponent<Tweener>().delay = 0.1f*i;
+            selector.GetComponent<Tweener>().ease = LeanTweenType.easeInOutBack;
+
             categoryButtons.Add(selector);
             i+=1;
         }
@@ -132,6 +139,8 @@ public class ManagerScr : MonoBehaviour
     {
         if (firstTime)
         {
+            firstTime=false;
+            StartCoroutine(SaveGameData(gameDataSaveFaileName));
             currentCategory=0;
             QuitzStart(currentCategory);
         }
@@ -149,6 +158,7 @@ public class ManagerScr : MonoBehaviour
         quizes = categoryList[selectedCategory].quizList;
         opcionCorrecta = Random.Range(0,3);
         currentQuiz=0;
+        ProgressBar();
         Painter();
     }
 
@@ -159,20 +169,43 @@ public class ManagerScr : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
         //puebla la barra de progreso con las estrellas que haya
-        for (int i = 0; i<10 ; i++)
+        Vector2 pos = progressionBar.transform.position;
+        progressionBar.transform.localScale = new Vector3 (0,0,0);
+        LeanTween.scale(progressionBar,new Vector3(1,1,1),0.2f).setDelay(0.2f).setEase(LeanTweenType.linear).setOnComplete(
+            ()=>{
+                    for (int i = 0; i<10 ; i++)
+                    {
+                        pos.y += 2f;
+                        GameObject dot = Instantiate(progressionDot,pos,progressionBar.transform.rotation,progressionBar.transform);
+                        
+                        dot.transform.localScale  = new Vector3 (0,0,0);
+                        LeanTween.scale(dot,new Vector3(2,2,2),0.2f).setDelay(0.1f*i).setEase(LeanTweenType.easeInOutBack).setOnComplete(
+                            ()=> {LeanTween.scale(dot,new Vector3(1,1,1),0.2f);}
+                        );
+                        
+                        if (categoryList[currentCategory].categoryStars[i])
+                        {
+                            dot.transform.GetChild(1).gameObject.SetActive(true);
+                        }
+                        if (i==0)
+                        {
+                            dot.transform.localScale = new Vector3 (2,2,2);
+                        }
+                    }
+                    LeanTween.scale(progressionBar.transform.GetChild(0).gameObject,new Vector3(2,2,2),0.2f).setDelay(0.5f);
+                    
+            }
+        );
+    }
+
+    private void ProgressioDotCheck()
+    {
+        foreach(Transform child in progressionBar.transform)
         {
-            Vector2 pos = progressionBar.transform.position;
-            pos.x -= 270 - (60*i);
-            GameObject dot = Instantiate(progressionDot,pos,progressionBar.transform.rotation,progressionBar.transform);
-            if (categoryList[currentCategory].categoryStars[i])
-            {
-                dot.transform.GetChild(2).gameObject.SetActive(true);
-            }
-            if (i==currentQuiz)
-            {
-                dot.transform.localScale = new Vector3 (2,2,2);
-            }
+            if (child.GetChild(1).GetChild(0).gameObject.activeSelf) {child.GetChild(1).GetChild(0).gameObject.SetActive(false);}
+            child.localScale = new Vector3(1,1,1);
         }
+        LeanTween.scale(progressionBar.transform.GetChild(currentQuiz).gameObject,new Vector3(2,2,2),0.2f);
     }
 
 
@@ -185,7 +218,6 @@ public class ManagerScr : MonoBehaviour
         
         hintPrompt.text = quizes[currentQuiz].hint[opcionCorrecta].texto[lang];
         answerPrompt.text = quizes[currentQuiz].answer[opcionCorrecta].texto[lang];
-        ProgressBar();
     }
 
 
@@ -227,7 +259,8 @@ public class ManagerScr : MonoBehaviour
                 categoryList[currentCategory].categoryStars[currentQuiz] = true;
                 StartCoroutine(SaveData(categoryList,quizListFileName));
                 
-                ProgressBar();
+                progressionBar.transform.GetChild(currentQuiz).GetChild(1).gameObject.SetActive(true);
+                progressionBar.transform.GetChild(currentQuiz).GetChild(1).GetChild(0).gameObject.SetActive(true);
             }
             
         }
@@ -239,71 +272,95 @@ public class ManagerScr : MonoBehaviour
 
     public void NextQuiz()
     {
-        //if it is the last quiz or the tenth, move on to categories.
-        if ( currentQuiz == 10 || currentQuiz == quizes.Count-1)
+        GameObject tweeningObject = winScreen.transform.GetChild(0).GetChild(1).gameObject;
+        if (!LeanTween.isTweening(tweeningObject))
         {
-            //Salir de los quizes e ir a las categorías
+            //if it is the last quiz or the tenth, move on to categories.
+            if ( currentQuiz == 10 || currentQuiz == quizes.Count-1)
+            {
+                //Salir de los quizes e ir a las categorías
 
-            ShowCategories(true);
+                ShowCategories(true);
+            }
+            else
+            {
+                //Move to next quiz
+                opcionCorrecta = Random.Range(0,3);
+                currentQuiz+=1;
+                ProgressioDotCheck();
+                Painter();
+            }
+            mainPrompt.SetActive(true);
+            hintPrompt.gameObject.SetActive(true);
+            winScreen.SetActive(false);
         }
-        else
-        {
-            //Move to next quiz
-            opcionCorrecta = Random.Range(0,3);
-            currentQuiz+=1;
-            Painter();
-        }
-        mainPrompt.SetActive(true);
-        hintPrompt.gameObject.SetActive(true);
-        winScreen.SetActive(false);
     }
 
     public void SelectCategory(int index)
     {
-        currentCategory=index;
-
-        //Pregunto si está bloquedao, si lo está pop message 
-        if (categoryList[currentCategory].isLocked)
+        if (canSelectCategory)
         {
-            //Pop message based on score
-            PopScreenToggle(true);
-            messageBox.SetActive(true);
-            optPop.SetActive(false);
+            canSelectCategory=false;
+            currentCategory=index;
 
-            if (score < categoryList[currentCategory].costToUnlock)
+            //Pregunto si está bloquedao, si lo está pop message 
+            if (categoryList[currentCategory].isLocked)
             {
-                popMessage.text=_gameTexts[1].texto[lang];
+                LeanTween.scale(categoryButtons[index],new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(()=>{canSelectCategory=true;});
+
+                //Pop message based on score
+                PopScreenToggle(true);
+                messageBox.SetActive(true);
+                optPop.SetActive(false);
+
+                if (score < categoryList[currentCategory].costToUnlock)
+                {
+                    popMessage.text=_gameTexts[1].texto[lang];
+                }
+                else
+                {
+                    popMessage.text=_gameTexts[2].texto[lang];
+                }
+                
             }
             else
             {
-                popMessage.text=_gameTexts[2].texto[lang];
+                LeanTween.scale(categoryButtons[index],new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
+                    ()=>{
+                        ShowCategories(false);
+                        canSelectCategory=true;
+                        QuitzStart(currentCategory);
+                    }
+                );
             }
-            
         }
-        else
-        {
-            ShowCategories(false);
-            QuitzStart(currentCategory);
-        } 
+         
     }
 
     public void OkButton()
     {
-        if (score >= categoryList[currentCategory].costToUnlock)
-            {
-                score -= categoryList[currentCategory].costToUnlock;
-                StartCoroutine(SaveGameData(gameDataSaveFaileName));
+        if (!LeanTween.isTweening(messageBox.transform.GetChild(1).gameObject))
+        {
+            LeanTween.scale(messageBox.transform.GetChild(1).gameObject,new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
+                ()=> {
+                        if (score >= categoryList[currentCategory].costToUnlock)
+                        {
+                            score -= categoryList[currentCategory].costToUnlock;
+                            StartCoroutine(SaveGameData(gameDataSaveFaileName));
 
-                categoryList[currentCategory].isLocked=false;
-                StartCoroutine(SaveData(categoryList,quizListFileName));
+                            categoryList[currentCategory].isLocked=false;
+                            StartCoroutine(SaveData(categoryList,quizListFileName));
 
-                categoryButtons[currentCategory].GetComponent<Image>().color = C_VERDE;
-                categoryButtons[currentCategory].transform.GetChild(1).gameObject.SetActive(false);
+                            categoryButtons[currentCategory].GetComponent<Image>().color = C_VERDE;
+                            categoryButtons[currentCategory].transform.GetChild(1).gameObject.SetActive(false);
 
-                ShowCategories(false);
-                QuitzStart(currentCategory);
-            }
-        PopScreenToggle(false);
+                            ShowCategories(false);
+                            QuitzStart(currentCategory);
+                        }
+                        PopScreenToggle(false);
+                }
+            );
+        }
     }
 
     public void OptionsMenuToggle()
@@ -315,35 +372,58 @@ public class ManagerScr : MonoBehaviour
 
     public void SoundOptionToggle()
     {
-        sound = !sound;
-        if (sound) {soundButton.sprite = optIcons[0];}else{soundButton.sprite = optIcons[1];}
-        StartCoroutine(SaveGameData(gameDataSaveFaileName));
+        if (!LeanTween.isTweening(soundButton.gameObject))
+        {
+            LeanTween.scale(soundButton.gameObject,new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
+                ()=> {
+                    sound = !sound;
+                    if (sound) {soundButton.sprite = optIcons[0];}else{soundButton.sprite = optIcons[1];}
+                    StartCoroutine(SaveGameData(gameDataSaveFaileName));
+                }
+            );
+        }
     }
     public void AdsOptionToggle()
     {
-        ads = !ads;
-        if (ads) {adsButton.sprite = optIcons[2];}else{adsButton.sprite = optIcons[3];}
+        if (!LeanTween.isTweening(adsButton.gameObject))
+        {
+            LeanTween.scale(adsButton.gameObject,new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
+                ()=> {
+                    ads = !ads;
+                    if (ads) {adsButton.sprite = optIcons[2];}else{adsButton.sprite = optIcons[3];}
+                }
+            );
+        }
     }
+    
+    
     public void LangOptionToggle()
     {
-        lang = (lang<maxLang-1)? lang+=1 : 0;
-        langButton.text = _gameTexts[3].texto[lang];
-        flagButton.sprite = optIcons[4+lang];
-
-        mainPrompt.GetComponent<TextMeshProUGUI>().text = _gameTexts[0].texto[lang];
-        if (pantallaJuego.activeSelf)
+        if (!LeanTween.isTweening(optPop.transform.GetChild(2).gameObject))
         {
-            hintPrompt.text = quizes[currentQuiz].hint[opcionCorrecta].texto[lang];
-            answerPrompt.text = quizes[currentQuiz].answer[opcionCorrecta].texto[lang];
-        }
-        var i=0;
-        foreach (GameObject button in categoryButtons)
-        {
-            button.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = categoryList[i].nombre[lang];
-            i+=1;
-        }
+            LeanTween.scale(optPop.transform.GetChild(2).gameObject,new Vector3(0.8f,0.8f,0.8f),0.1f).setLoopPingPong(1).setOnComplete(
+                ()=> {
+                    lang = (lang<maxLang-1)? lang+=1 : 0;
+                    langButton.text = _gameTexts[3].texto[lang];
+                    flagButton.sprite = optIcons[4+lang];
 
-        StartCoroutine(SaveGameData(gameDataSaveFaileName));
+                    mainPrompt.GetComponent<TextMeshProUGUI>().text = _gameTexts[0].texto[lang];
+                    if (pantallaJuego.activeSelf)
+                    {
+                        hintPrompt.text = quizes[currentQuiz].hint[opcionCorrecta].texto[lang];
+                        answerPrompt.text = quizes[currentQuiz].answer[opcionCorrecta].texto[lang];
+                    }
+                    var i=0;
+                    foreach (GameObject button in categoryButtons)
+                    {
+                        button.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = categoryList[i].nombre[lang];
+                        i+=1;
+                    }
+
+                    StartCoroutine(SaveGameData(gameDataSaveFaileName));
+                }
+            );
+        }
     }
 
 
@@ -357,7 +437,10 @@ public class ManagerScr : MonoBehaviour
 
     public void PopScreenToggle(bool activate)
     {
-        pantallaPop.SetActive(activate);
+        if (!LeanTween.isTweening(messageBox) && !LeanTween.isTweening(optPop))
+        {
+            pantallaPop.SetActive(activate);
+        }
     }
 
 
