@@ -29,8 +29,10 @@ public class ManagerScr : MonoBehaviour
     [SerializeField] private bool sound;
     [SerializeField] private bool ads;
     [SerializeField] private bool firstTime;
+    [SerializeField] private int quizesPerCategory;
     private int opcionCorrecta;
     private bool canSelectCategory=true;
+    private bool streak;
     
     [Header("Game object references")]
     [SerializeField] private Image background;
@@ -167,6 +169,7 @@ public class ManagerScr : MonoBehaviour
         quizes = categoryList[selectedCategory].quizList;
         opcionCorrecta = Random.Range(0,3);
         currentQuiz=0;
+        streak=false;
         ProgressBar();
         Painter();
     }
@@ -185,7 +188,7 @@ public class ManagerScr : MonoBehaviour
         progressionBar.transform.localScale = new Vector3 (0,0,0);
         LeanTween.scale(progressionBar,new Vector3(1,1,1),0.2f).setDelay(0.2f).setEase(LeanTweenType.linear).setOnComplete(
             ()=>{
-                    for (int i = 0; i<10 ; i++)
+                    for (int i = 0; i< quizesPerCategory ; i++)
                     {
                         pos.y += 2f;
                         GameObject dot = Instantiate(progressionDot,pos,progressionBar.transform.rotation,progressionBar.transform);
@@ -262,6 +265,8 @@ public class ManagerScr : MonoBehaviour
         winIcon.sprite = images[quizes[currentQuiz].img[opcionCorrecta]];
         
         winScreen.SetActive(true);
+        float pitch = 1f;
+
         if (opt == opcionCorrecta)
         {
             winEffect.SetActive(true);
@@ -278,7 +283,8 @@ public class ManagerScr : MonoBehaviour
                 progressionBar.transform.GetChild(currentQuiz).GetChild(1).gameObject.SetActive(true);
                 progressionBar.transform.GetChild(currentQuiz).GetChild(1).GetChild(0).gameObject.SetActive(true);
 
-                AudioPlay(0,1f,0);
+                if (!streak) { streak=true; } else { pitch+=0.2f; }
+                AudioPlay(0,pitch,0);
             }
             else
             {
@@ -288,7 +294,8 @@ public class ManagerScr : MonoBehaviour
         }
         else
         {
-            AudioPlay(0,1f,2);
+            if (streak) {streak=false; pitch=1f;}
+            AudioPlay(0,pitch,2);
             winEffect.SetActive(false);
         }
     }
@@ -299,7 +306,7 @@ public class ManagerScr : MonoBehaviour
         if (!LeanTween.isTweening(tweeningObject))
         {
             //if it is the last quiz or the tenth, move on to categories.
-            if ( currentQuiz == 10 || currentQuiz == quizes.Count-1)
+            if ( currentQuiz == quizesPerCategory-1 || currentQuiz == quizes.Count-1)
             {
                 //Salir de los quizes e ir a las categorías
 
