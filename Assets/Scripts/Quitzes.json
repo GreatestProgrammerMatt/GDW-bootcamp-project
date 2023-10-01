@@ -69,7 +69,7 @@
                     "answer": [
                         { "texto" : [ "Snakes don't go under the sea","Las serpientes no viven bajo el mar","Schlangen wohnen nicht unter dem Meer" ] },
                         { "texto" : [ "Octopuses are complex shaped","Los pulpos tienen forma rara","Oktopoden haben komplizierte Gestalt" ] },
-                        { "texto" : [ "","","" ] }
+                        { "texto" : [ "Shrimps have tiny legs","Los camarones tienen patitas","Garnelen haben Beinchen" ] }
                     ]
                 }
             ]
@@ -83,66 +83,66 @@
                 {
                     "img": ["15","16","17"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Shouldn't eat with your hands","No los comería con la mano","Nein mit Hände" ] },
+                        { "texto" : [ "Solid choice","Plato sólido","Festes Essen" ] },
+                        { "texto" : [ "It's one thing only","Es solo una cosa","Es ist nur eine Sache" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Pizza is eaten with your hands","La pizza se come con la mano","Pizza soll mit Hände essen sein" ] },
+                        { "texto" : [ "Soup is liquid","La sopa es líquida","Suppe ist flüssig" ] },
+                        { "texto" : [ "Noodles are many things","Los fideos son muchas cosas","Pasta ist vieles" ] }
                     ]
                 },
                 {
                     "img": ["18","19","20"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Better raw","Mejor crudos","Besser roh" ] },
+                        { "texto" : [ "Veggies only","Solo verduras","Nur Gemüse" ] },
+                        { "texto" : [ "Round around","Giran redondos","Rund herum" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Turnip are better cooked","El nabo se cocina","Rübe ist besser gekocht" ] },
+                        { "texto" : [ "Tomatoes are technically fruits","Los tomates son técnicamente frutas","Tomaten sind Früchte" ] },
+                        { "texto" : [ "Lettuce is not round","La lechuga no es redonda","Der Salat ist nicht rund" ] }
                     ]
                 },
                 {
                     "img": ["21","22","23"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Nice to eat walking by","Para disfrutar mientras paseas","Nett zu essen, wenn man spaziert" ] },
+                        { "texto" : [ "Meaty","Carnosos","Fleischlich" ] },
+                        { "texto" : [ "Classic combo","Combo clásico","Klassische Combo" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Burgers should be eaten on a table","Las hamburguesas se comen en la mesa","Hamburger ist man am Tisch" ] },
+                        { "texto" : [ "Fries have no meat","Las papas no tienen carne","Pommes haben kein Fleisch" ] },
+                        { "texto" : [ "Hotdogs are fine alone","Los panchos van solos","Hot Dogs sind alleine in Ordnung" ] }
                     ]
                 },
                 {
                     "img": ["24","25","26"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Clear as day","Claro como el día","Glasklar" ] },
+                        { "texto" : [ "Don't eat the bones","No comas los huesos","Iß die Knochen nicht" ] },
+                        { "texto" : [ "From the farm to the table","De la granja a la mesa","Von der Farm zum Tisch" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Beef isn't white meat","El bife no es carne blanca","Rindfleisch ist kein weißes Fleisch" ] },
+                        { "texto" : [ "Chicken bones are edible","El pollo tiene huesos comestibles","Hänhchen haben essbare Knochen" ] },
+                        { "texto" : [ "Fishes don't live in the farm","Los peces no viven en la granja","Fische leben in der Farm nicht" ] }
                     ]
                 },
                 {
                     "img": ["27","28","29"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Cool many things","Muchas frescas","Viele frisch" ] },
+                        { "texto" : [ "It's a berry, Gerry","Vaya bayas","Sie nennen sich Beeren" ] },
+                        { "texto" : [ "Better in red","Rojas son mejores","Am besten rot" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
-                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
-                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
+                        { "texto" : [ "Strawberry is a single berry","La frutilla es una sola","Erdbeeren sind eine eigene Beere" ] },
+                        { "texto" : [ "Grapes aren't call berries","El racimo no es una baya","Trauben nennen sich Beeren nicht" ] },
+                        { "texto" : [ "Blueberries are not red","Los aràndanos no son rojos","Blaubeeren sind nicht rot" ] }
                     ]
                 }
             ]
@@ -188,7 +188,7 @@
                     ],
                     "answer": [
                         { "texto" : [ "Taj Mahal isn't a tower","El Taj Mahal no es una torre","Taj Mahal ist kein Trum" ] },
-                        { "texto" : [ "Eiffel tower is black","La torre Eiffel es negra","Eiffel Trum ist schwarz" ] },
+                        { "texto" : [ "Eiffel tower is gray","La torre Eiffel es gris","Eiffel Trum ist grau" ] },
                         { "texto" : [ "The Big Ben has a clock","EL Big Ben tiene reloj","Der Big Ben hat eine Uhr" ] }
                     ]
                 },
@@ -229,66 +229,66 @@
                 {
                     "img": ["0","1","2"],
                     "hint": [
-                        { "texto" : [ "How small!","¡Qué pequeño!","Wie klein!" ] },
-                        { "texto" : [ "Go for fresh air","Ve a tomar aire fresco","Hab' frische Lust" ] },
-                        { "texto" : [ "Look so happy","Tan felices","Sie sehen froh aus" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Dog isn't small","El perro no es pequeño","Hund ist nicht klein" ] },
-                        { "texto" : [ "Fish can't be on fresh air","El pez no respira","Fisch kann kein Luft haben" ] },
-                        { "texto" : [ "Cat isn't happy","EL gato no está feliz","Katze ist nicht froh" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["3","4","5"],
                     "hint": [
-                        { "texto" : [ "Let's get dry","Bien secos","So trocken"] },
-                        { "texto" : [ "So many colors","Tantos colores","so viele Farben" ] },
-                        { "texto" : [ "Not on trees","En los árboles no","Nicht an Bäumen" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Frogs are amphibious","Las ranas son anfibias","Frösche sind amphibisch" ] },
-                        { "texto" : [ "Iguanas doesn't come in many colors","Las iguanas no tienen muchos colores","Leguane haben nicht so viele Farben" ] },
-                        { "texto" : [ "Chameleons live on trees","Los camaleones viven en los árboles","Chamäleon wohnen an Bäumen" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["6","7","8"],
                     "hint": [
-                        { "texto" : [ "In the farm","En la granja","In der Farm" ] },
-                        { "texto" : [ "The biggests","Los más grandes","Die Größte" ] },
-                        { "texto" : [ "Can't mount them","No los montes","Bestige sie nicht" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Lions don't live on farms","Los leones no están en la granja","Löwe wohnt nicht in der Farm" ] },
-                        { "texto" : [ "Mice are small","Los ratones son pequeños","Mäuse sind klein" ] },
-                        { "texto" : [ "Horses con be mounted","Los caballos se montan","Pferde kann bestigten sein" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["9","10","11"],
                     "hint": [
-                        { "texto" : [ "So clear","Está claro","Es ist klar" ] },
-                        { "texto" : [ "Monochromatic","Monocromáticos","Monochromatisch" ] },
-                        { "texto" : [ "Peek at the beak","Explico el pico","Schau dir den Schnabel an" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Black Duck is dark","EL pato negro es oscuro","Die schwarze Ente ist dunkel" ] },
-                        { "texto" : [ "Green Duck is colorful","EL pato verde es colorido","Die grüne Ente ist bunt" ] },
-                        { "texto" : [ "Geese have a short beak","Los gansos tienen  pico corto","Gänse haben kurtze Schnabel" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["12","13","14"],
                     "hint": [
-                        { "texto" : [ "Under the sea","Bajo el mar","Unter dem Meer" ] },
-                        { "texto" : [ "Long and slender","Largos y delgados","Lang und schlank" ] },
-                        { "texto" : [ "No legs club","Club sin patas","Keine Beine Club" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Snakes don't go under the sea","Las serpientes no viven bajo el mar","Schlangen wohnen nicht unter dem Meer" ] },
-                        { "texto" : [ "Octopuses are complex shaped","Los pulpos tienen forma rara","Oktopoden haben komplizierte Gestalt" ] },
-                        { "texto" : [ "","","" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 }
             ]
@@ -302,9 +302,9 @@
                 {
                     "img": ["15","16","17"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -315,9 +315,9 @@
                 {
                     "img": ["18","19","20"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -328,9 +328,9 @@
                 {
                     "img": ["21","22","23"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -341,9 +341,9 @@
                 {
                     "img": ["24","25","26"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -354,9 +354,9 @@
                 {
                     "img": ["27","28","29"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -375,66 +375,66 @@
                 {
                     "img": ["30","31","32"],
                     "hint": [
-                        { "texto" : [ "More abstract","Más abstractos","Mehr abstrakt" ] },
-                        { "texto" : [ "Colorful","Colorido","Bunt" ] },
-                        { "texto" : [ "Reality check","Choque de realidad","Realitätsschock" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Mona Lisa is realist","La Mona Lisa es realista","Mona Lisa ist realistisch" ] },
-                        { "texto" : [ "Guernica is monochromatic","EL Guernica es monocromático","Guernica ist monochromatisch" ] },
-                        { "texto" : [ "The Starry Night is inspired in a dream","La noche estrellada se inspira en un sueño","Sternennacht ist basierend auf einem Traum" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["33","34","35"],
                     "hint": [
-                        { "texto" : [ "USA!","Estados Unidos!","USA!" ] },
-                        { "texto" : [ "Only short ones","Bajos","Die kleine" ] },
-                        { "texto" : [ "Spots","Deporte","Sports" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Messi is argentine","Messi es argentino","Messi ist argentiner" ] },
-                        { "texto" : [ "Jordan is the tallest","Jordan es el más alto","Jordan ist der Grösste" ] },
-                        { "texto" : [ "Hendrix is a musician","Hendrix es músico","Hendrix ist ein Musiker" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["36","37","38"],
                     "hint": [
-                        { "texto" : [ "Tall Towers","Altas torres","Hohe Türme" ] },
-                        { "texto" : [ "Colorful","Coloridos","Bunt" ] },
-                        { "texto" : [ "No way to know the time","No hay forma de saber la hora","Keine Möglichkeit, die Uhrzeit zu kennen" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Taj Mahal isn't a tower","El Taj Mahal no es una torre","Taj Mahal ist kein Trum" ] },
-                        { "texto" : [ "Eiffel tower is black","La torre Eiffel es negra","Eiffel Trum ist schwarz" ] },
-                        { "texto" : [ "The Big Ben has a clock","EL Big Ben tiene reloj","Der Big Ben hat eine Uhr" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["39","40","41"],
                     "hint": [
-                        { "texto" : [ "They are on the dollar bill","En el billete del dolar","Im Dollar Schein" ] },
-                        { "texto" : [ "So alive","Tan vivos","So lebend" ] },
-                        { "texto" : [ "No humas allowed","Sin humanos","Kein Menschen" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Aliens are not on the dollar bill","Los aliens no aparecen en el billete del dolar","Aliens sind nicht im Dollar Schein" ] },
-                        { "texto" : [ "Pyramids are not alive","Las pirámides no están vivas","Pyramiden sind nicht lebend" ] },
-                        { "texto" : [ "Franklin was a human","Franklin era humano","Franklin war ein Mensch" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["42","43","44"],
                     "hint": [
-                        { "texto" : [ "Good time to be good","Buen momento para ser bueno","Gute Zeit, um gut zu sein" ] },
-                        { "texto" : [ "So real","Tan real","So real" ] },
-                        { "texto" : [ "Good sight","Buena vista","Gut Anblick" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Hitler wasn't right","Hitler no","Hitler war ein Mensch" ] },
-                        { "texto" : [ "The tramp is a fictional character","El vagabundo es un personaje ficticio","Der Landstreicher ist eine fiktive Figur" ] },
-                        { "texto" : [ "Gandhi wears glasses","Gandhi usa lentes","Gandhi nutzt Brille" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 }
             ]
@@ -448,66 +448,66 @@
                 {
                     "img": ["0","1","2"],
                     "hint": [
-                        { "texto" : [ "How small!","¡Qué pequeño!","Wie klein!" ] },
-                        { "texto" : [ "Go for fresh air","Ve a tomar aire fresco","Hab' frische Lust" ] },
-                        { "texto" : [ "Look so happy","Tan felices","Sie sehen froh aus" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Dog isn't small","El perro no es pequeño","Hund ist nicht klein" ] },
-                        { "texto" : [ "Fish can't be on fresh air","El pez no respira","Fisch kann kein Luft haben" ] },
-                        { "texto" : [ "Cat isn't happy","EL gato no está feliz","Katze ist nicht froh" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["3","4","5"],
                     "hint": [
-                        { "texto" : [ "Let's get dry","Bien secos","So trocken"] },
-                        { "texto" : [ "So many colors","Tantos colores","so viele Farben" ] },
-                        { "texto" : [ "Not on trees","En los árboles no","Nicht an Bäumen" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Frogs are amphibious","Las ranas son anfibias","Frösche sind amphibisch" ] },
-                        { "texto" : [ "Iguanas doesn't come in many colors","Las iguanas no tienen muchos colores","Leguane haben nicht so viele Farben" ] },
-                        { "texto" : [ "Chameleons live on trees","Los camaleones viven en los árboles","Chamäleon wohnen an Bäumen" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["6","7","8"],
                     "hint": [
-                        { "texto" : [ "In the farm","En la granja","In der Farm" ] },
-                        { "texto" : [ "The biggests","Los más grandes","Die Größte" ] },
-                        { "texto" : [ "Can't mount them","No los montes","Bestige sie nicht" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Lions don't live on farms","Los leones no están en la granja","Löwe wohnt nicht in der Farm" ] },
-                        { "texto" : [ "Mice are small","Los ratones son pequeños","Mäuse sind klein" ] },
-                        { "texto" : [ "Horses con be mounted","Los caballos se montan","Pferde kann bestigten sein" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["9","10","11"],
                     "hint": [
-                        { "texto" : [ "So clear","Está claro","Es ist klar" ] },
-                        { "texto" : [ "Monochromatic","Monocromáticos","Monochromatisch" ] },
-                        { "texto" : [ "Peek at the beak","Explico el pico","Schau dir den Schnabel an" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Black Duck is dark","EL pato negro es oscuro","Die schwarze Ente ist dunkel" ] },
-                        { "texto" : [ "Green Duck is colorful","EL pato verde es colorido","Die grüne Ente ist bunt" ] },
-                        { "texto" : [ "Geese have a short beak","Los gansos tienen  pico corto","Gänse haben kurtze Schnabel" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["12","13","14"],
                     "hint": [
-                        { "texto" : [ "Under the sea","Bajo el mar","Unter dem Meer" ] },
-                        { "texto" : [ "Long and slender","Largos y delgados","Lang und schlank" ] },
-                        { "texto" : [ "No legs club","Club sin patas","Keine Beine Club" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Snakes don't go under the sea","Las serpientes no viven bajo el mar","Schlangen wohnen nicht unter dem Meer" ] },
-                        { "texto" : [ "Octopuses are complex shaped","Los pulpos tienen forma rara","Oktopoden haben komplizierte Gestalt" ] },
-                        { "texto" : [ "","","" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 }
             ]
@@ -521,9 +521,9 @@
                 {
                     "img": ["15","16","17"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -534,9 +534,9 @@
                 {
                     "img": ["18","19","20"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -547,9 +547,9 @@
                 {
                     "img": ["21","22","23"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -560,9 +560,9 @@
                 {
                     "img": ["24","25","26"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -573,9 +573,9 @@
                 {
                     "img": ["27","28","29"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -594,9 +594,9 @@
                 {
                     "img": ["30","31","32"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -607,9 +607,9 @@
                 {
                     "img": ["33","34","35"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -620,9 +620,9 @@
                 {
                     "img": ["36","37","38"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -633,9 +633,9 @@
                 {
                     "img": ["39","40","41"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -646,9 +646,9 @@
                 {
                     "img": ["42","43","44"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -667,66 +667,66 @@
                 {
                     "img": ["0","1","2"],
                     "hint": [
-                        { "texto" : [ "How small!","¡Qué pequeño!","Wie klein!" ] },
-                        { "texto" : [ "Go for fresh air","Ve a tomar aire fresco","Hab' frische Lust" ] },
-                        { "texto" : [ "Look so happy","Tan felices","Sie sehen froh aus" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Dog isn't small","El perro no es pequeño","Hund ist nicht klein" ] },
-                        { "texto" : [ "Fish can't be on fresh air","El pez no respira","Fisch kann kein Luft haben" ] },
-                        { "texto" : [ "Cat isn't happy","EL gato no está feliz","Katze ist nicht froh" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["3","4","5"],
                     "hint": [
-                        { "texto" : [ "Let's get dry","Bien secos","So trocken"] },
-                        { "texto" : [ "So many colors","Tantos colores","so viele Farben" ] },
-                        { "texto" : [ "Not on trees","En los árboles no","Nicht an Bäumen" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Frogs are amphibious","Las ranas son anfibias","Frösche sind amphibisch" ] },
-                        { "texto" : [ "Iguanas doesn't come in many colors","Las iguanas no tienen muchos colores","Leguane haben nicht so viele Farben" ] },
-                        { "texto" : [ "Chameleons live on trees","Los camaleones viven en los árboles","Chamäleon wohnen an Bäumen" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["6","7","8"],
                     "hint": [
-                        { "texto" : [ "In the farm","En la granja","In der Farm" ] },
-                        { "texto" : [ "The biggests","Los más grandes","Die Größte" ] },
-                        { "texto" : [ "Can't mount them","No los montes","Bestige sie nicht" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Lions don't live on farms","Los leones no están en la granja","Löwe wohnt nicht in der Farm" ] },
-                        { "texto" : [ "Mice are small","Los ratones son pequeños","Mäuse sind klein" ] },
-                        { "texto" : [ "Horses con be mounted","Los caballos se montan","Pferde kann bestigten sein" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["9","10","11"],
                     "hint": [
-                        { "texto" : [ "So clear","Está claro","Es ist klar" ] },
-                        { "texto" : [ "Monochromatic","Monocromáticos","Monochromatisch" ] },
-                        { "texto" : [ "Peek at the beak","Explico el pico","Schau dir den Schnabel an" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Black Duck is dark","EL pato negro es oscuro","Die schwarze Ente ist dunkel" ] },
-                        { "texto" : [ "Green Duck is colorful","EL pato verde es colorido","Die grüne Ente ist bunt" ] },
-                        { "texto" : [ "Geese have a short beak","Los gansos tienen  pico corto","Gänse haben kurtze Schnabel" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 },
                 {
                     "img": ["12","13","14"],
                     "hint": [
-                        { "texto" : [ "Under the sea","Bajo el mar","Unter dem Meer" ] },
-                        { "texto" : [ "Long and slender","Largos y delgados","Lang und schlank" ] },
-                        { "texto" : [ "No legs club","Club sin patas","Keine Beine Club" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
-                        { "texto" : [ "Snakes don't go under the sea","Las serpientes no viven bajo el mar","Schlangen wohnen nicht unter dem Meer" ] },
-                        { "texto" : [ "Octopuses are complex shaped","Los pulpos tienen forma rara","Oktopoden haben komplizierte Gestalt" ] },
-                        { "texto" : [ "","","" ] }
+                        { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
+                        { "texto" : [ "It was the two","Era la dos","Es war die Zwei" ] },
+                        { "texto" : [ "It was the three","Era la tres","Es war die Drei" ] }
                     ]
                 }
             ]
@@ -740,9 +740,9 @@
                 {
                     "img": ["15","16","17"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -753,9 +753,9 @@
                 {
                     "img": ["18","19","20"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -766,9 +766,9 @@
                 {
                     "img": ["21","22","23"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -779,9 +779,9 @@
                 {
                     "img": ["24","25","26"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -792,9 +792,9 @@
                 {
                     "img": ["27","28","29"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -813,9 +813,9 @@
                 {
                     "img": ["30","31","32"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -826,9 +826,9 @@
                 {
                     "img": ["33","34","35"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -839,9 +839,9 @@
                 {
                     "img": ["36","37","38"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -852,9 +852,9 @@
                 {
                     "img": ["39","40","41"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },
@@ -865,9 +865,9 @@
                 {
                     "img": ["42","43","44"],
                     "hint": [
-                        { "texto" : [ "It's the one","Es la uno","Es ist die Eins" ] },
-                        { "texto" : [ "It's the two","Es la dos","Es ist die Zwei" ] },
-                        { "texto" : [ "It's the three","Es la tres","Es ist die Drei" ] }
+                        { "texto" : [ "Hint pointing the one","Pista para la uno","Hinweis zu die Eins" ] },
+                        { "texto" : [ "Hint pointing the two","Pista para la dos","Hinweis zu die Zwei" ] },
+                        { "texto" : [ "Hint pointing the three","Pista para la tres","Hinweis zu die Drei" ] }
                     ],
                     "answer": [
                         { "texto" : [ "It was the one","Era la uno","Es war die Eins" ] },

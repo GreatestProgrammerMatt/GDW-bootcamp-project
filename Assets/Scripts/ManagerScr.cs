@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -213,7 +214,7 @@ public class ManagerScr : MonoBehaviour
         );
     }
 
-    private void ProgressioDotCheck()
+    private void ProgressionDotCheck()
     {
         foreach(Transform child in progressionBar.transform)
         {
@@ -252,6 +253,26 @@ public class ManagerScr : MonoBehaviour
  ::::::::::::..::::::::..::::::::........::::.......::::::..::::::.......:::..::::..::........:::......:::
  
 */
+    
+    public void ResetTheGameAndGameFiles()
+    {
+        //Erease the local memory files trhough the JSONHandler
+        JSONHandler.EraseFile(gameDataSaveFaileName);
+        JSONHandler.EraseFile(quizListFileName);
+
+        //Then restart the scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public void buttonPress(int option)
     {
         WinnScreen(option);
@@ -317,7 +338,7 @@ public class ManagerScr : MonoBehaviour
                 //Move to next quiz
                 opcionCorrecta = Random.Range(0,3);
                 currentQuiz+=1;
-                ProgressioDotCheck();
+                ProgressionDotCheck();
                 Painter();
             }
             mainPrompt.SetActive(true);

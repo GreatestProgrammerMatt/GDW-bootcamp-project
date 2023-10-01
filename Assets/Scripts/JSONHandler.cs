@@ -287,4 +287,29 @@ public static class JSONHandler
     }
 
 
+
+    /*
+ 
+     _______ __        ______                         
+    / ____(_) /__     / ____/________ _________  _____
+   / /_  / / / _ \   / __/ / ___/ __ `/ ___/ _ \/ ___/
+  / __/ / / /  __/  / /___/ /  / /_/ (__  )  __/ /    
+ /_/   /_/_/\___/  /_____/_/   \__,_/____/\___/_/     
+                                                      
+ 
+*/
+
+    //Borra un archivo si existe
+    public static void EraseFile(string fileName)
+    {
+        string path = PathFinder(fileName);
+
+        if (File.Exists(path))
+        {
+            File.Delete( path );
+        } 
+    }
+
+
+
 }
